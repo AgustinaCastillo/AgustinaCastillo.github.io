@@ -1,0 +1,91 @@
+/* agregando fuente de letras */
+@font-face {
+    font-family: 'letra-contenido';
+    src: url('./fuentes/SawarabiMincho-Regular.ttf') ;
+  }
+
+body{
+    background: linear-gradient(90deg, rgba(116,111,205,1) 0%, rgba(233,233,240,1) 40%, rgba(226,152,232,1) 62%);
+    height: auto;
+    width: auto;   
+    }
+  
+  .tarjeta {
+    width: 700px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2);
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    font-family: letra-contenido;
+  }
+
+  .tarjeta p{
+    text-align: center;
+  }
+  .encabezado {
+    background-color: #72236b;
+    color: white;
+    padding: 15px;
+    display: flex;
+  }
+
+  .encabezado h1{
+  padding: 2%;
+  }
+
+  .foto-perfil {
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .titulo{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 10px #3b5998;
+  }
+  .container {
+    width: 700px;
+    height: auto;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .datos{
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .skills {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #72236b;
+    color: #fff;
+    border-radius: 40px;
+  }
+  
+ .contact-icons {
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+  }
+   
+  .contact-icons img {
+    width: 50px;
+    height: 50px;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #777;
+  }
+  

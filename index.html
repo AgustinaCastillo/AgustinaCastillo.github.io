@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Curriculum</title>
+  <!-- CSS con los estilos -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- titulo -->
+  <h1 class="titulo">MI CURRICULUM</h1>
+  <!-- caja de informacion -->
+  <div class="tarjeta">
+      <div class="encabezado">
+          <img id="avatar" class="foto-perfil" src="" alt="Avatar">
+          <h1 id="name"></h1>
+      </div>
+      <div class="contenido">
+          <h3 class="titulo">Soy un desarrollador web con experiencia en HTML, CSS y JavaScript.</h3>
+          <div>
+            <ul class="datos"><h3>Datos personales</h3>
+              <li>Fecha de Nacimiento: <span id="date"></span></li>
+              <li>Edad: <span id="edad"></span></li>
+              <li>Direccion: <span id="location"></span></li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul class="datos"> <h3>Educacion</h3>
+              <li>Curso de Argentina Programa</li>
+            </ul>
+          </div>
+
+          <div>
+            <ul><h3>Habilidades</h3> <br>
+              <li class="skills" >HTML</li>
+              <li class="skills" >CSS</li>
+              <li class="skills" >JavaScript</li>
+            </ul>
+          </div>
+
+          <div>
+            <ul class="datos"><h3>Proyectos</h3>
+              <li><a href="./facebook agus.html">Mi sitio Web personal.</a></li>
+            </ul>
+          </div>
+          <!-- contactos -->
+          <section class="contact">
+            <div class="container">
+              <h2>Contacto</h2>
+              <div class="contact-icons">
+                <!-- iconos -->
+                <p>
+                   <i onmouseover="showInfo('email')" onmouseout="hideInfo('email')">
+                     <img src="https://cdn4.iconfinder.com/data/icons/sketchy-office-icon-set/512/mail-01-46.png"/>
+                  </i>
+                    <span id="email" class="hidden"></span>
+                </p>
+                <p> 
+                  <i onmouseover="showInfo('phone')" onmouseout="hideInfo('phone')">
+                    <img src="https://cdn4.iconfinder.com/data/icons/sketchy-office-icon-set/512/phone-01-46.png">
+                  </i>
+                  <span id="phone" class="hidden"></span>
+                </p>
+
+              </div>
+            </div>
+          </section>
+  </div>
+  <!-- pie de pagina -->
+  <footer>
+    <div class="container">
+      <p>© 2023 Desarrollador Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+<!-- Script para cargar API y animacion de Iconos -->
+<script src="./funciones.js"></script>
+</html>
