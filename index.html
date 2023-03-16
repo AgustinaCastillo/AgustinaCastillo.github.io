@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,74 +8,143 @@
   <title>Mi Curriculum</title>
   <!-- CSS con los estilos -->
   <link rel="stylesheet" href="./styles.css">
+  <!-- Boton de redes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
   <!-- titulo -->
   <h1 class="titulo">MI CURRICULUM</h1>
   <!-- caja de informacion -->
   <div class="tarjeta">
-      <div class="encabezado">
-          <img id="avatar" class="foto-perfil" src="" alt="Avatar">
-          <h1 id="name"></h1>
+    <div class="encabezado">
+      <img id="avatar" class="foto-perfil" src="" alt="Avatar">
+      <h1 id="name"></h1>
+    </div>
+
+    <div class="contenido">
+      <h3 class="titulo">Soy un desarrollador web con experiencia en HTML, CSS y JavaScript.</h3>
+      <div class="sobre-mi">
+        <h3>Sobre mi</h3>
+        <p class="mostrar">Me gusta aprovechar todos los recursos online disponibles
+          con afán de ser un desarrollador capaz de encontrar soluciones sofisticadas a problemas
+          complejos y/o robustos.</p>
       </div>
-      <div class="contenido">
-          <h3 class="titulo">Soy un desarrollador web con experiencia en HTML, CSS y JavaScript.</h3>
-          <div>
-            <ul class="datos"><h3>Datos personales</h3>
-              <li>Fecha de Nacimiento: <span id="date"></span></li>
-              <li>Edad: <span id="edad"></span></li>
-              <li>Direccion: <span id="location"></span></li>
-            </ul>
-          </div>
-          
-          <div>
-            <ul class="datos"> <h3>Educacion</h3>
-              <li>Curso de Argentina Programa</li>
-            </ul>
-          </div>
 
-          <div>
-            <ul><h3>Habilidades</h3> <br>
-              <li class="skills" >HTML</li>
-              <li class="skills" >CSS</li>
-              <li class="skills" >JavaScript</li>
-            </ul>
-          </div>
+      <div>
+        <ul class="datos">
+          <h3>Datos personales</h3>
+          <li>Fecha de Nacimiento: <span id="date"></span></li>
+          <li>Edad: <span id="edad"></span></li>
+          <li>Direccion: <span id="location"></span></li>
+        </ul>
+      </div>
 
-          <div>
-            <ul class="datos"><h3>Proyectos</h3>
-              <li><a href="./facebook agus.html">Mi sitio Web personal.</a></li>
-            </ul>
-          </div>
-          <!-- contactos -->
-          <section class="contact">
-            <div class="container">
-              <h2>Contacto</h2>
-              <div class="contact-icons">
-                <!-- iconos -->
-                <p>
-                   <i onmouseover="showInfo('email')" onmouseout="hideInfo('email')">
-                     <img src="https://cdn4.iconfinder.com/data/icons/sketchy-office-icon-set/512/mail-01-46.png"/>
-                  </i>
-                    <span id="email" class="hidden"></span>
-                </p>
-                <p> 
-                  <i onmouseover="showInfo('phone')" onmouseout="hideInfo('phone')">
-                    <img src="https://cdn4.iconfinder.com/data/icons/sketchy-office-icon-set/512/phone-01-46.png">
-                  </i>
-                  <span id="phone" class="hidden"></span>
-                </p>
+      <div>
+        <ul class="datos">
+          <h3>Educacion</h3>
+          <li>Curso de Argentina Programa</li>
+        </ul>
+      </div>
 
+      <div>
+        <ul>
+          <h3>Habilidades</h3> <br>
+          <li class="skills">HTML</li>
+          <li class="skills">CSS</li>
+          <li class="skills">JavaScript</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="datos">
+          <h3>Proyectos</h3>
+          <li><a href="./facebook agus.html">Mi sitio Web personal.</a></li>
+        </ul>
+      </div>
+
+      <!-- Boton contactar -->
+      <div class="btn">
+        <button id="abrir-popup" class="boton">Contactar</button>
+        <div class="dot">
+        </div>
+      </div>
+
+      <!-- formulario de contacto -->
+      <div class="popup">
+        <form>
+          <h2>Formulario de contacto</h2>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <button class="boton" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <!-- pie de pagina -->
+      <footer>
+        <!-- Redes -->
+        <button class="buttonRedes">
+          <div class="letters">
+            <div class="card">
+              <div class="card_face front">R</div>
+              <div class="card_face back">
+                <a href="https://github.com/AgustinaCastillo/AgustinaCastillo.github.io" target="_blank">
+                  <i class="fab fa-github-square"></i></a>
               </div>
             </div>
-          </section>
-  </div>
-  <!-- pie de pagina -->
-  <footer>
-    <div class="container">
-      <p>© 2023 Desarrollador Web. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+          </div>
+
+          <div class="letters">
+            <div class="card">
+              <div class="card_face front">E</div>
+              <div class="card_face back">
+                <a href="https://twitter.com" target="_blank">
+                  <i class="fab fa-twitter-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="letters">
+            <div class="card">
+              <div class="card_face front">D</div>
+              <div class="card_face back">
+                <a href="https://es-la.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="letters">
+            <div class="card">
+              <div class="card_face front">E</div>
+              <div class="card_face back">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="letters">
+            <div class="card">
+              <div class="card_face front">S</div>
+              <div class="card_face back">
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <div class="container">
+          <p>© 2023 Desarrollador Web. Todos los derechos reservados.</p>
+        </div>
+      </footer>
 </body>
 <!-- Script para cargar API y animacion de Iconos -->
 <script src="./funciones.js"></script>
