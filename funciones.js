@@ -13,7 +13,7 @@ fetch("https://randomuser.me/api/")
   document.getElementById("location").innerHTML = user.location.street.name + " " + user.location.street.number + ", " + user.location.state  + ", " +  user.location.country;
 });
 
-// Animacion de iconos
+//Mostrar ocultar texto "Sobre Mi" 
 function showInfo(id) {
   var info = document.getElementById(id);
   info.classList.remove('hidden');
@@ -23,3 +23,28 @@ function hideInfo(id) {
   var info = document.getElementById(id);
   info.classList.add('hidden');
 }
+
+const sobreMi = document.querySelector('.sobre-mi');
+
+sobreMi.addEventListener('mouseover', () => {
+  sobreMi.classList.add('mostrar');
+});
+
+sobreMi.addEventListener('mouseout', () => {
+  sobreMi.classList.remove('mostrar');
+});
+
+// formulario de contacto
+
+const abrirPopupBtn = document.getElementById('abrir-popup');
+const popup = document.querySelector('.popup');
+
+abrirPopupBtn.addEventListener('click', () => {
+  popup.classList.add('visible');
+});
+
+document.addEventListener('click', (event) => {
+  if (!popup.contains(event.target) && event.target !== abrirPopupBtn) {
+    popup.classList.remove('visible');
+  }
+});
