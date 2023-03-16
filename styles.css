@@ -18,6 +18,7 @@ body{
     overflow: hidden;
     margin: auto;
     font-family: letra-contenido;
+    animation: animTarj 400ms linear 0s 1 normal forwards;
   }
 
   .tarjeta p{
@@ -58,7 +59,6 @@ body{
 
   .datos{
     list-style: none;
-    margin-bottom: 10px;
   }
   
   .skills {
@@ -84,8 +84,267 @@ body{
     display: none;
   }
   
+  /* footer */
   footer p {
     font-size: 14px;
     color: #777;
   }
   
+
+  @keyframes animTarj {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .sobre-mi h3 {
+    padding-inline-start: 40px;
+    margin-right: 10px;
+  }
+  
+  .sobre-mi .mostrar {
+    display: none;
+    padding-inline-start: 40px;
+    text-align: left;
+    animation: animSobreMi 1s ease 0s 1 normal forwards;
+      }
+  
+  .sobre-mi:hover .mostrar {
+    display: block;
+   }
+
+   @keyframes animSobreMi {
+    0% {
+      transform: scaleY(0);
+      transform-origin: 100% 0%;
+    }
+  
+    100% {
+      transform: scaleY(1);
+      transform-origin: 100% 0%;
+    }
+  }
+
+  /* formulario */
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: animForm 1s ease 0s 1 normal forwards;
+  }
+  
+  .popup form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(233,233,240,1);
+    padding: 50px;
+    border-radius: 15px;
+    width: 400px;
+  }
+  
+  .popup form h2 {
+    margin-top: 0;
+  }
+  
+  .popup form label {
+    display: flex;
+    margin-bottom: 1px;
+  }
+  
+  .popup form input,
+  .popup form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .popup form button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popup form button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  .popup.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes animForm {
+    0% {
+      transform: scale(0.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* boton contactar */
+  :root {
+    --primary: #fcfcfc;
+    --solid: #ec3ec1;
+    --btn-w: 10em;
+    --dot-w: calc(var(--btn-w)*.2);
+    --tr-X: calc(var(--btn-w) - var(--dot-w));
+  }
+  * {box-sizing: border-box;}
+  *:before, *:after {box-sizing: border-box;}
+
+
+  .boton{
+    background-color: #72236b;
+    color: white; 
+    padding: 12px 44px; 
+    font-size: 16px; 
+    border: none;
+    } 
+
+  .btn {
+    position: relative;
+    margin: 0 auto;
+    width: var(--btn-w);
+    color: var(--primary);
+    border: .15em solid var(--primary);
+    border-radius: 5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2em;
+    cursor: pointer;  
+    background-color: #72236b;
+  }
+  .dot {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: var(--dot-w);
+    height: 100%;
+    border-radius: 100%;
+    transition: all 300ms ease;
+    display: none;
+  }
+
+  .dot:after {
+    content: '';
+    position: absolute;
+    left: calc(50% - .4em);
+    top: -.4em;
+    height: .8em;
+    width: .8em;
+    background: var(--primary);
+    border-radius: 1em;
+    border: .25em solid var(--solid);
+    box-shadow: 0 0 .7em var(--solid),
+          0 0 2em var(--primary);
+  }
+
+  .btn:hover .dot,
+  .btn:focus .dot {
+    animation: atom 2s infinite linear;
+    display: block;
+  }
+
+  @keyframes atom {
+    0% {transform: translateX(0) rotate(0);}
+    30%{transform: translateX(var(--tr-X)) rotate(0);}
+    50% {transform: translateX(var(--tr-X)) rotate(180deg);}
+    80% {transform: translateX(0) rotate(180deg);}
+    100% {transform: translateX(0) rotate(360deg);}
+  }
+
+
+  /* REDES */
+        .buttonRedes {
+        margin-top: 15px;
+        height: 60px;
+        border: none;
+        background: #ffffff00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 700px;
+      }
+
+       .buttonRedes::before,
+      .buttonRedes::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background-color: #000;
+        transition: width 1s ease-in-out;
+      }
+
+      .buttonRedes:before {
+        
+        top: 0;
+        left: 0;
+      }
+
+      .buttonRedes:after {
+        
+        bottom: 0;
+        right: 0;
+      }
+
+      .buttonRedes:hover:before,
+      .buttonRedes:hover:after {
+        width: 100%;
+      }
+
+      .letters {
+        width: 50px;
+        height: 50px;
+        perspective: 600px;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 1s ease-in-out;
+        transform-style: preserve-3d;
+      }
+
+      .card_face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .back {
+        transform: rotateY(180deg);
+      }
+
+      .buttonRedes:hover .card {
+        transform: rotateY(180deg);
+      }
